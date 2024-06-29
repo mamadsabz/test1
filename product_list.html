@@ -1,0 +1,487 @@
+{% extends '_layout.html' %}
+
+{% block title %}
+    لیست محصولات
+{% endblock %}
+
+{% block content %}
+    <main class="main">
+
+        <div class="site-breadcrumb">
+            <div class="site-breadcrumb-bg" style="background: url(/static/img/breadcrumb/01.jpg)"></div>
+            <div class="container">
+                <div class="site-breadcrumb-wrap">
+                    <h4 class="breadcrumb-title">فهرست فروشگاه یک</h4>
+                    <ul class="breadcrumb-menu">
+                        <li><a href="index.html"><i class="far fa-home"></i> صفحه اصلی</a></li>
+                        <li class="active">فهرست فروشگاه یک</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="shop-area py-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="shop-sidebar">
+                            <div class="shop-widget">
+                                <div class="shop-search-form">
+                                    <h4 class="shop-widget-title">جستجو</h4>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="جستجو">
+                                            <button type="search"><i class="far fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">دسته</h4>
+                                <ul class="shop-category-list">
+                                    <li><a href="#">مواد غذایی و منگنه<span>(15)</span></a></li>
+                                    <li><a href="#">سبزیجات تازه<span>(15)</span></a></li>
+                                    <li><a href="#">میوه ها و آب میوه ها<span>(15)</span></a></li>
+                                    <li><a href="#">لبنیات و تخم مرغ<span>(15)</span></a></li>
+                                    <li><a href="#">غذاهای دریایی و ماهی<span>(15)</span></a></li>
+                                    <li><a href="#">غذاهای رژیمی<span>(15)</span></a></li>
+                                    <li><a href="#">فست فودها<span>(15)</span></a></li>
+                                    <li><a href="#">غذاهای خشک<span>(15)</span></a></li>
+                                    <li><a href="#">گوشت تازه<span>(15)</span></a></li>
+                                    <li><a href="#">نوشابه‌های گازدار(15)</a></li>
+                                    <li><a href="#">دیگر<span>(25)</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">برندها</h4>
+                                <ul class="shop-checkbox-list">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand1">
+                                            <label class="form-check-label" for="brand1">ادورا<span>(12)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand2">
+                                            <label class="form-check-label" for="brand2">بیلوک<span>(15)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand3">
+                                            <label class="form-check-label" for="brand3">ریحان<span>(20)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand4">
+                                            <label class="form-check-label"
+                                                   for="brand4">کارناتوکس<span>(05)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand5">
+                                            <label class="form-check-label" for="brand5">سلورا<span>(09)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand6">
+                                            <label class="form-check-label" for="brand6">بیوندا<span>(25)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand7">
+                                            <label class="form-check-label"
+                                                   for="brand7">آگریفرام<span>(19)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand8">
+                                            <label class="form-check-label"
+                                                   for="brand8">فرامپرو<span>(23)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand9">
+                                            <label class="form-check-label" for="brand9">مواد غذایی
+                                                تازه<span>(13)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand10">
+                                            <label class="form-check-label" for="brand10">ماهی
+                                                دریا<span>(14)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand11">
+                                            <label class="form-check-label" for="brand11">به صورت
+                                                ارگانیک<span>(16)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand12">
+                                            <label class="form-check-label"
+                                                   for="brand12">سلامتی<span>(17)</span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="brand13">
+                                            <label class="form-check-label"
+                                                   for="brand13">دیگران<span>(18)</span></label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">حدود قیمت</h4>
+                                <div class="price-range-box">
+                                    <div class="price-range-input">
+                                        <input type="text" id="price-amount" readonly="">
+                                    </div>
+                                    <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
+                                             style="left: 10%; width: 30%;"></div>
+                                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"
+                                              style="left: 10%;"></span><span tabindex="0"
+                                                                              class="ui-slider-handle ui-corner-all ui-state-default"
+                                                                              style="left: 40%;"></span></div>
+                                </div>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">فروش</h4>
+                                <ul class="shop-checkbox-list">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sale1">
+                                            <label class="form-check-label" for="sale1">حراج</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sale2">
+                                            <label class="form-check-label" for="sale2">در انبار</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sale3">
+                                            <label class="form-check-label" for="sale3"> خارج از انبار</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sale4">
+                                            <label class="form-check-label" for="sale4">تخفیف</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">رتبه بندی ها</h4>
+                                <ul class="shop-checkbox-list rating">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rate1">
+                                            <label class="form-check-label" for="rate1">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rate2">
+                                            <label class="form-check-label" for="rate2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rate3">
+                                            <label class="form-check-label" for="rate3">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rate4">
+                                            <label class="form-check-label" for="rate4">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rate5">
+                                            <label class="form-check-label" for="rate5">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">رنگ ها</h4>
+                                <ul class="shop-checkbox-list color">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="color1">
+                                            <label class="form-check-label" for="color1"><span
+                                                    style="background-color: #606ddd"></span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="color2">
+                                            <label class="form-check-label" for="color2"><span
+                                                    style="background-color: #4caf50"></span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="color3">
+                                            <label class="form-check-label" for="color3"><span
+                                                    style="background-color: #17a2b8"></span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="color4">
+                                            <label class="form-check-label" for="color4"><span
+                                                    style="background-color: #ffc107"></span></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="color5">
+                                            <label class="form-check-label" for="color5"><span
+                                                    style="background-color: #f44336"></span></label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget">
+                                <h4 class="shop-widget-title">اندازه های بسته</h4>
+                                <ul class="shop-checkbox-list">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="size1">
+                                            <label class="form-check-label" for="size1">400 به 500 g</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="size2">
+                                            <label class="form-check-label" for="size2">500 به 700 g</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="size3">
+                                            <label class="form-check-label" for="size3">700 به 1 kg</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="size4">
+                                            <label class="form-check-label" for="size4">2 قطعه</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="size5">
+                                            <label class="form-check-label" for="size5">1 کارتن عدد</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shop-widget-banner mt-30 mb-50">
+                                <div class="banner-img"
+                                     style="background-image:url(/static/img/banner/shop-banner.jpg)"></div>
+                                <div class="banner-content">
+                                    <h6><span>35٪ تخفیف </span></h6> دریافت کنید
+                                    <h4>مجموعه جدید مواد غذایی</h4>
+                                    <a href="#" class="theme-btn">اکنون خرید کنید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="col-md-12">
+                            <div class="shop-sort">
+                                <div class="shop-sort-box">
+                                    <div class="shop-sorty-label">مرتب سازی بر اساس:</div>
+                                    <select class="select" style="display: none;">
+                                        <option value="1">مرتب‌سازی پیش‌فرض</option>
+                                        <option value="5">آخرین حالت</option>
+                                        <option value="2">پرفروش ترین مد</option>
+                                        <option value="3">قیمت - پایین به بالا</option>
+                                        <option value="4">قیمت - از بالا به پایین</option>
+                                    </select>
+                                    <div class="nice-select select" tabindex="0"><span
+                                            class="current">مرتب‌سازی پیش‌فرض</span>
+                                        <ul class="list">
+                                            <li data-value="1" class="option selected">مرتب‌سازی پیش‌فرض</li>
+                                            <li data-value="5" class="option">آخرین حالت</li>
+                                            <li data-value="2" class="option">پرفروش ترین مد</li>
+                                            <li data-value="3" class="option">قیمت - پایین به بالا</li>
+                                            <li data-value="4" class="option">قیمت - از بالا به پایین</li>
+                                        </ul>
+                                    </div>
+                                    <div class="shop-sort-show">نمایش 1-10 نتیجه از 50 نتیجه</div>
+                                </div>
+                                <div class="shop-sort-gl">
+                                    <a href="shop-grid.html" class="shop-sort-grid"><i class="far fa-grid-round-2"></i></a>
+                                    <a href="shop-list.html" class="shop-sort-list active"><i
+                                            class="far fa-list-ul"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop-item-wrapper item-list">
+                            <div class="row g-4">
+                                {% for product in products %}
+                                    <div class="col-md-12">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <span class="type hot"> داغ</span>
+                                                <a href="shop-single.html"><img src="/static/img/product/p2.png" alt=""></a>
+                                                <div class="product-action-wrap">
+                                                    <div class="product-action">
+                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
+                                                           data-tooltip="tooltip" aria-label="مشاهده سریع"
+                                                           data-bs-original-title="مشاهده سریع"><i
+                                                                class="far fa-eye"></i></a>
+                                                        <a href="#" data-tooltip="tooltip"
+                                                           aria-label="افزودن به علاقه مندی "
+                                                           data-bs-original-title="افزودن به علاقه مندی "><i
+                                                                class="far fa-heart"></i></a>
+                                                        <a href="#" data-tooltip="tooltip"
+                                                           aria-label=" مقایسه"
+                                                           data-bs-original-title=" مقایسه"><i
+                                                                class="far fa-arrows-repeat"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <h3 class="product-title"><a
+                                                        href="shop-single.html">{{ product.title }}</a>
+                                                </h3>
+                                                <div class="product-rate">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <p3>{{ product.descript }}</p3>
+                                                <div class="product-bottom">
+                                                    <div class="product-price">
+                                                        <span>تومان {{ product.price }}</span>
+                                                    </div>
+                                                    <button type="button" class="product-cart-btn"
+                                                            data-bs-placement="right"
+                                                            data-tooltip="tooltip" aria-label="افزودن به سبد خرید"
+                                                            data-bs-original-title="افزودن به سبد خرید">
+                                                        <i class="far fa-shopping-bag"></i>
+                                                    </button>
+                                                    {#                                                    <button type="button" class="product-cart-btn"#}
+                                                    {#                                                            data-bs-placement="right"#}
+                                                    {#                                                            data-tooltip="tooltip" aria-label="جزییات"#}
+                                                    {#                                                            data-bs-original-title="جزییات"#}
+                                                    {#                                                            onclick="window.location.href='product_detail.html'">#}
+                                                    {#                                                        <i class="far fa-shopping-bag"></i>#}
+                                                    {#                                                    </button>#}
+                                                    <a href="product_detail.html">جزییات</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="pagination-area mb-0">
+                            <div aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true"><i class="fa fa-arrow-right"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><span class="page-link">...</span></li>
+                                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="newsletter-area pb-100">
+            <div class="container">
+                <div class="newsletter-wrap">
+                    <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                            <div class="newsletter-content">
+                                <h3>دریافت کوپن تخفیف <span>20%</span></h3>
+                                <p>با مشترک شدن در خبرنامه ما</p>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="email" class="form-control" placeholder="آدرس ایمیل شما">
+                                        <button class="theme-btn" type="submit">
+                                            اشتراک <i class="far fa-paper-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
