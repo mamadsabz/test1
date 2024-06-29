@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
 
-class HomeModuleConfig(AppConfig):
+class ProductModuleConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'home_module'
+    name = 'product_module'
+    verbose_name = 'دسته محصولات'
