@@ -1,0 +1,992 @@
+{% extends '_layout.html' %}
+
+{% block title %}
+    {{ product.title }}
+{% endblock %}
+
+{% block content %}
+    <body>
+
+    <div class="preloader" style="display: none;">
+        <div class="loader-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <header class="header">
+
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-wrapper">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-5">
+                            <div class="header-top-left">
+                                <ul class="header-top-list text-left">
+                                    <li><a href="mailto:info@example.com"><i class="far fa-envelopes"></i>
+                                        info@example.com</a></li>
+                                    <li><a href="tel:+21236547898"><i class="far fa-headset"></i> <span class="dir-ltr"> 01112324568</span></a>
+                                    </li>
+                                    <li class="help"><a href="#"><i class="far fa-comment-question"></i> نیاز به کمک
+                                        دارید؟</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-7">
+                            <div class="header-top-right">
+                                <ul class="header-top-list text-left">
+                                    <li><a href="#"><i class="far fa-timer"></i> معامله روزانه</a></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                <i class="far fa-usd"></i> USD
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">USD</a>
+                                                <a class="dropdown-item" href="#">EUR</a>
+                                                <a class="dropdown-item" href="#">AUD</a>
+                                                <a class="dropdown-item" href="#">CUD</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                <i class="far fa-globe-americas"></i> EN
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">EN</a>
+                                                <a class="dropdown-item" href="#">FR</a>
+                                                <a class="dropdown-item" href="#">DE</a>
+                                                <a class="dropdown-item" href="#">RU</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="social">
+                                        <div class="header-top-social">
+                                            <span>ما را دنبال کنید:  </span>
+                                            <a href="#"><i class="fab fa-facebook"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-middle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-5 col-lg-3 col-xl-3">
+                        <div class="header-middle-logo">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="/static/img/logo/logo.png" alt="لوگو">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-6 col-xl-5">
+                        <div class="header-middle-search">
+                            <form action="#">
+                                <div class="search-content">
+                                    <select class="select" style="display: none;">
+                                        <option value="">همه دسته ها</option>
+                                        <option value="1">تخفیفات داغ امروز</option>
+                                        <option value="2">سبزیجات تازه</option>
+                                        <option value="3">مواد غذایی و منگنه</option>
+                                        <option value="4">میوه ها و آب میوه ها</option>
+                                        <option value="5">لبنیات و تخم مرغ</option>
+                                        <option value="6">غذاهای دریایی و ماهی</option>
+                                        <option value="7">گوشت تازه</option>
+                                        <option value="8">غذاهای خشک</option>
+                                        <option value="9">فست فودها</option>
+                                        <option value="10">نان و نانوایی</option>
+                                    </select>
+                                    <div class="nice-select select" tabindex="0"><span
+                                            class="current">همه دسته ها</span>
+                                        <ul class="list">
+                                            <li data-value="" class="option selected">همه دسته ها</li>
+                                            <li data-value="1" class="option">تخفیفات داغ امروز</li>
+                                            <li data-value="2" class="option">سبزیجات تازه</li>
+                                            <li data-value="3" class="option">مواد غذایی و منگنه</li>
+                                            <li data-value="4" class="option">میوه ها و آب میوه ها</li>
+                                            <li data-value="5" class="option">لبنیات و تخم مرغ</li>
+                                            <li data-value="6" class="option">غذاهای دریایی و ماهی</li>
+                                            <li data-value="7" class="option">گوشت تازه</li>
+                                            <li data-value="8" class="option">غذاهای خشک</li>
+                                            <li data-value="9" class="option">فست فودها</li>
+                                            <li data-value="10" class="option">نان و نانوایی</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="در اینجا جستجو کنید...">
+                                    <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-7 col-lg-3 col-xl-4">
+                        <div class="header-middle-right">
+                            <ul class="header-middle-list">
+                                <li>
+                                    <div class="header-middle-account">
+                                        <div class="dropdown">
+                                            <div data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img src="/static/img/account/02.jpg" alt="">
+                                            </div>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li>
+                                                    <div class="dropdown-user">
+                                                        <h5> خوش آمدید! دانیال</h5>
+                                                        <p>موجودی شما: 200.00 تومان</p>
+                                                    </div>
+                                                </li>
+                                                <li><a class="dropdown-item" href="user-dashboard.html"><i
+                                                        class="fa fa-gauge-high"></i> داشبورد</a></li>
+                                                <li><a class="dropdown-item" href="user-profile.html"><i
+                                                        class="fa fa-user"></i> نمایه من</a></li>
+                                                <li><a class="dropdown-item" href="order-list.html"><i
+                                                        class="far fa-shopping-bag"></i> فهرست سفارشات من</a></li>
+                                                <li><a class="dropdown-item" href="wishlist.html"><i
+                                                        class="far fa-heart"></i> علاقه مندی ها </a></li>
+                                                <li><a class="dropdown-item" href="user-setting.html"><i
+                                                        class="fa fa-gear"></i> تنظیمات</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>
+                                                    خروج </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="list-item">
+                                        <div class="list-item-icon">
+                                            <i class="far fa-heart"></i><span>0</span>
+                                        </div>
+                                        <div class="list-item-info">
+                                            <h6>علاقمندی ها</h6>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-cart">
+                                    <a href="#" class="shop-cart list-item">
+                                        <div class="list-item-icon">
+                                            <i class="far fa-shopping-bag"></i><span>5</span>
+                                        </div>
+                                        <div class="list-item-info">
+                                            <h6>3.500.000 تومان</h6>
+                                            <h5>سبد خرید </h5>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-cart-menu">
+                                        <div class="dropdown-cart-header">
+                                            <span>03 مورد</span>
+                                            <a href="#">مشاهده سبد خرید</a>
+                                        </div>
+                                        <ul class="dropdown-cart-list">
+                                            <li>
+                                                <div class="dropdown-cart-item">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src="/static/img/product/p10.png" alt="#"></a>
+                                                    </div>
+                                                    <div class="cart-info">
+                                                        <h4><a href="#">{{ product.id }}</a></h4>
+                                                        <p class="cart-qty"><span
+                                                                class="cart-amount">{{ product.price }}</span></p>
+                                                    </div>
+                                                    <a href="#" class="cart-remove" title="Remove this item"><i
+                                                            class="far fa-times-circle"></i></a>
+                                                </div>
+                                            </li>
+                                                                                        <li>
+                                                                                            <div class="dropdown-cart-item">
+                                                                                                <div class="cart-img">
+                                                                                                    <a href="#"><img src="/static/img/product/p1.png" alt="#"></a>
+                                                                                                </div>
+                                                                                                <div class="cart-info">
+                                                                                                    <h4><a href="#">میوه‌های تازه ارگانیک</a></h4>
+                                                                                                    <p class="cart-qty"><span
+                                                                                                            class="cart-amount">120 تومان -1x</span></p>
+                                                                                                </div>
+                                                                                                <a href="#" class="cart-remove" title="Remove this item"><i
+                                                                                                        class="far fa-times-circle"></i></a>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <div class="dropdown-cart-item">
+                                                                                                <div class="cart-img">
+                                                                                                    <a href="#"><img src="/static/img/product/p18.png" alt="#"></a>
+                                                                                                </div>
+                                                                                                <div class="cart-info">
+                                                                                                    <h4><a href="#">میوه‌های تازه ارگانیک</a></h4>
+                                                                                                    <p class="cart-qty"><span
+                                                                                                            class="cart-amount">120 تومان -1x</span></p>
+                                                                                                </div>
+                                                                                                <a href="#" class="cart-remove" title="Remove this item"><i
+                                                                                                        class="far fa-times-circle"></i></a>
+                                                                                            </div>
+                                                                                        </li>
+                                        </ul>
+                                        <div class="dropdown-cart-bottom">
+                                            <div class="dropdown-cart-total">
+                                                <span>مجموع</span>
+                                                <span class="total-amount">تومان  650.00</span>
+                                            </div>
+                                            <a href="#" class="theme-btn"> تسویه حساب</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-navigation">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container position-relative">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/static/img/logo/logo.png" class="logo-scrolled" alt="لوگو">
+                    </a>
+                    <div class="category-all">
+                        <button class="category-btn" type="button">
+                            <i class="fas fa-list-ul"></i><span>همه دسته بندی ها</span>
+                        </button>
+                        <ul class="main-category">
+                            <li><a href="#"><img src="/static/img/icon/grocery.svg"
+                                                 alt=""><span>مواد غذایی و منگنه</span></a></li>
+                            <li>
+                                <a href="#">
+                                    <img src="/static/img/icon/vegetable.svg" alt="">
+                                    <span>سبزیجات تازه</span><i class="far fa-angle-right"></i>
+                                </a>
+                                <div class="sub-category-mega">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">میوه های تازه</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">سبزیجات</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">گوشت تازه</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-img">
+                                                <a href="#"><img src="/static/img/category/01.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="/static/img/icon/fruit.svg" alt="">
+                                    <span>میوه ها و آب میوه ها</span><i class="far fa-angle-right"></i>
+                                </a>
+                                <div class="sub-category-mega">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">میوه های تازه</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">سبزیجات</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-single">
+                                                <h6 class="category-title-text">گوشت تازه</h6>
+                                                <div class="category-link">
+                                                    <a href="#">سیب و گلابی</a>
+                                                    <a href="#">توت و گیلاس</a>
+                                                    <a href="#">گوشت و مرغ</a>
+                                                    <a href="#">سبزیجات تازه</a>
+                                                    <a href="#">کره و مارگارین</a>
+                                                    <a href="#">صبحانه و لبنیات</a>
+                                                    <a href="#">جایگزین تخم مرغ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="category-img">
+                                                <a href="#"><img src="/static/img/category/01.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/dairy.svg"
+                                                 alt=""><span>لبنیات و تخم مرغ</span></a></li>
+                            <li><a href="#"><img src="/static/img/icon/fish.svg"
+                                                 alt=""><span>غذاهای دریایی و ماهی</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/diet.svg" alt=""><span>غذاهای رژیمی</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/fast-food.svg" alt=""><span>فست فودها</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/dry-food.svg" alt=""><span>غذاهای خشک</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/meat.svg" alt=""><span>گوشت تازه</span></a></li>
+                            <li><a href="#"><img src="/static/img/icon/drink.svg" alt=""><span>نوشیدنی‌ها</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/coffee.svg" alt=""><span>قهوه و چای</span></a>
+                            </li>
+                            <li><a href="#"><img src="/static/img/icon/bakery.svg" alt=""><span>نان و نانوایی</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-right">
+                        <div class="search-btn">
+                            <button type="button" class="nav-right-link"><i class="far fa-search"></i></button>
+                            <div class="mobile-search-form">
+                                <form action="#">
+                                    <input type="text" class="form-control" placeholder="در اینجا جستجو کنید...">
+                                    <button type="submit"><i class="far fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-mobile-icon"><i class="far fa-bars"></i></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main_nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"> خانه</a>
+                                <ul class="dropdown-menu fade-down">
+                                    <li><a class="dropdown-item" href="index.html"> صفحه اصلی 01</a></li>
+                                    <li><a class="dropdown-item" href="index-2.html">صفحه اصلی 02</a></li>
+                                    <li><a class="dropdown-item" href="index-3.html">صفحه اصلی 03</a></li>
+                                    <li><a class="dropdown-item" href="index-4.html">صفحه اصلی 04</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">درباره</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">صفحات</a>
+                                <ul class="dropdown-menu fade-down">
+                                    <li><a class="dropdown-item" href="about.html">درباره ما</a></li>
+                                    <li><a class="dropdown-item" href="brand.html">برندها</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">دسته</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="category.html">دسته یک</a></li>
+                                            <li><a class="dropdown-item" href="category-2.html">دسته دو</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">احراز هویت</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="login.html"> ورود</a></li>
+                                            <li><a class="dropdown-item" href="register.html">ثبت نام</a></li>
+                                            <li><a class="dropdown-item" href="forgot-password.html"> فراموشی رمز
+                                                عبور </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">صفحات اضافی</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="coming-soon.html">به زودی</a></li>
+                                            <li><a class="dropdown-item" href="return.html">سیاست بازگشت</a></li>
+                                            <li><a class="dropdown-item" href="terms.html">شرایط خدمات</a></li>
+                                            <li><a class="dropdown-item" href="privacy.html">حفظ حریم خصوصی</a></li>
+                                            <li><a class="dropdown-item" href="mail-success.html">موفقیت ایمیل</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="team.html">تیم ما</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">تماس با ما</a></li>
+                                    <li><a class="dropdown-item" href="help.html">کمک</a></li>
+                                    <li><a class="dropdown-item" href="invoice.html">فاکتورها</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">سوالات متداول</a></li>
+                                    <li><a class="dropdown-item" href="testimonial.html">نظرات مشتریان</a></li>
+                                    <li><a class="dropdown-item" href="404.html">خطای 404</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">حساب</a>
+                                <ul class="dropdown-menu fade-down">
+                                    <li><a class="dropdown-item" href="user-dashboard.html">داشبورد</a></li>
+                                    <li><a class="dropdown-item" href="user-profile.html">نمایه من</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">سفارشات</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="order-list.html">فهرست سفارشات</a></li>
+                                            <li><a class="dropdown-item" href="order-detail.html">جزئیات سفارشات</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="wishlist.html"> علاقه مندی ها </a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">آدرس</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="address-list.html">فهرست آدرس</a></li>
+                                            <li><a class="dropdown-item" href="add-address.html">اضافه کردن آدرس</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">بلیط های پشتیبانی</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="support-ticket.html">بلیط های
+                                                پشتیبانی</a></li>
+                                            <li><a class="dropdown-item" href="ticket-detail.html">جزئیات بلیط</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="track-order.html">پیگیری سفارش </a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">روش های پرداخت</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="payment-method.html">روش های پرداخت</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="add-payment.html">افزودن پرداخت</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="user-notification.html">اطلاع رسانی</a></li>
+                                    <li><a class="dropdown-item" href="user-message.html">پیام ها</a></li>
+                                    <li><a class="dropdown-item" href="user-setting.html">تنظیمات</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mega-menu dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">منو</a>
+                                <div class="dropdown-menu fade-down">
+                                    <div class="mega-content">
+                                        <div class="container-fluid px-lg-0">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-2">
+                                                    <h5 class="mega-menu-title">میوه های تازه</h5>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a class="dropdown-item" href="#">سیب و گلابی</a></li>
+                                                        <li><a class="dropdown-item" href="#">توت و گیلاس</a></li>
+                                                        <li><a class="dropdown-item" href="#">گوشت و مرغ</a></li>
+                                                        <li><a class="dropdown-item" href="#">سبزیجات تازه</a></li>
+                                                        <li><a class="dropdown-item" href="#">کره و مارگارین</a></li>
+                                                        <li><a class="dropdown-item" href="#">جایگزین تخم مرغ</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <h5 class="mega-menu-title">میوه های تازه</h5>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a class="dropdown-item" href="#">سیب و گلابی</a></li>
+                                                        <li><a class="dropdown-item" href="#">توت و گیلاس</a></li>
+                                                        <li><a class="dropdown-item" href="#">گوشت و مرغ</a></li>
+                                                        <li><a class="dropdown-item" href="#">سبزیجات تازه</a></li>
+                                                        <li><a class="dropdown-item" href="#">کره و مارگارین</a></li>
+                                                        <li><a class="dropdown-item" href="#">جایگزین تخم مرغ</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <h5 class="mega-menu-title">میوه های تازه</h5>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a class="dropdown-item" href="#">سیب و گلابی</a></li>
+                                                        <li><a class="dropdown-item" href="#">توت و گیلاس</a></li>
+                                                        <li><a class="dropdown-item" href="#">گوشت و مرغ</a></li>
+                                                        <li><a class="dropdown-item" href="#">سبزیجات تازه</a></li>
+                                                        <li><a class="dropdown-item" href="#">کره و مارگارین</a></li>
+                                                        <li><a class="dropdown-item" href="#">جایگزین تخم مرغ</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-lg-2">
+                                                    <h5 class="mega-menu-title">میوه های تازه</h5>
+                                                    <ul class="mega-menu-item">
+                                                        <li><a class="dropdown-item" href="#">سیب و گلابی</a></li>
+                                                        <li><a class="dropdown-item" href="#">توت و گیلاس</a></li>
+                                                        <li><a class="dropdown-item" href="#">گوشت و مرغ</a></li>
+                                                        <li><a class="dropdown-item" href="#">سبزیجات تازه</a></li>
+                                                        <li><a class="dropdown-item" href="#">کره و مارگارین</a></li>
+                                                        <li><a class="dropdown-item" href="#">جایگزین تخم مرغ</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <div class="mega-menu-img">
+                                                        <a href="#"><img src="/static/img/banner/mega-menu-banner.jpg"
+                                                                         alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">خرید</a>
+                                <ul class="dropdown-menu fade-down">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">شبکه فروشگاه</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="shop-grid.html">فروشگاه گرید یک</a></li>
+                                            <li><a class="dropdown-item" href="shop-grid-2.html">فروشگاه گرید دو</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">فهرست فروشگاه</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="shop-list.html">فهرست فروشگاه یک</a></li>
+                                            <li><a class="dropdown-item" href="shop-list-2.html">فهرست فروشگاه دو</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="shop-search.html">جستجوی فروشگاه</a></li>
+                                    <li><a class="dropdown-item" href="shop-cart.html">سبد خرید</a></li>
+                                    <li><a class="dropdown-item" href="shop-checkout.html"> تسویه حساب</a></li>
+                                    <li><a class="dropdown-item" href="shop-checkout-complete.html">تکمیل تسویه
+                                        حساب </a></li>
+                                    <li><a class="dropdown-item" href="shop-single.html">فروشگاه تک</a></li>
+                                    <li><a class="dropdown-item" href="shop-compare.html"> مقایسه </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">وبلاگ</a>
+                                <ul class="dropdown-menu fade-down">
+                                    <li><a class="dropdown-item" href="blog-grid.html">شبکه وبلاگ</a></li>
+                                    <li><a class="dropdown-item" href="blog-grid-sidebar.html">نوار کناری شبکه وبلاگ</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="blog-single.html">جزئیات وبلاگ </a></li>
+                                    <li><a class="dropdown-item" href="blog-single-sidebar.html">نوار کناری شبکه
+                                        وبلاگ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">تماس</a></li>
+                        </ul>
+                        <div class="nav-right">
+                            <a class="nav-right-link" href="#"><i class="fal fa-fire"></i> حراج </a>
+                            <a class="nav-right-link" href="track-order.html"><i class="fal fa-truck-fast"></i> پیگیری
+                                سفارش </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="site-breadcrumb">
+            <div class="site-breadcrumb-bg" style="background: url(/static/img/breadcrumb/01.jpg)"></div>
+            <div class="container">
+                <div class="site-breadcrumb-wrap">
+                    <h4 class="breadcrumb-title">جزئیات سفارشات</h4>
+                    <ul class="breadcrumb-menu">
+                        <li><a href="index.html"><i class="far fa-home"></i> صفحه اصلی</a></li>
+                        <li class="active">جزئیات سفارشات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="user-area bg pt-100 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="sidebar">
+                            <div class="sidebar-top">
+                                <div class="sidebar-profile-img">
+                                    <img src="/static/img/account/02.jpg" alt="">
+                                    <button type="button" class="profile-img-btn"><i class="fa fa-camera"></i></button>
+                                    <input type="file" class="profile-img-file">
+                                </div>
+                                <h5>انتونی جانسون</h5>
+                                <p>antoni@example.com</p>
+                            </div>
+                            <ul class="sidebar-list">
+                                <li><a href="user-dashboard.html"><i class="fa fa-gauge-high"></i> داشبورد</a></li>
+                                <li><a href="user-profile.html"><i class="fa fa-user"></i> نمایه من</a></li>
+                                <li><a class="active" href="order-list.html"><i class="far fa-shopping-bag"></i> فهرست
+                                    سفارشات <span class="badge badge-danger">۲</span></a></li>
+                                <li><a href="wishlist.html"><i class="far fa-heart"></i> علاقه مندی ها <span
+                                        class="badge badge-danger">۲</span></a></li>
+                                <li><a href="address-list.html"><i class="fa fa-location-dot"></i> فهرست آدرس</a></li>
+                                <li><a href="support-ticket.html"><i class="far fa-headset"></i> بلیط های پشتیبانی <span
+                                        class="badge badge-danger">۲</span></a></li>
+                                <li><a href="track-order.html"><i class="fa fa-map-location-dot"></i> پیگیری سفارش </a>
+                                </li>
+                                <li><a href="payment-method.html"><i class="fal fa-wallet"></i> روش های پرداخت</a></li>
+                                <li><a href="user-notification.html"><i class="fa fa-bell"></i> اعلان <span
+                                        class="badge badge-danger">۲</span></a></li>
+                                <li><a href="user-message.html"><i class="far fa-envelopes"></i> پیام ها <span
+                                        class="badge badge-danger">۲</span></a></li>
+                                <li><a href="user-setting.html"><i class="fa fa-gear"></i> تنظیمات</a></li>
+                                <li><a href="#"><i class="fa fa-sign-out"></i> خروج </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="user-wrapper">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="user-card user-order-detail">
+                                        <div class="user-card-header">
+                                            <h4 class="user-card-title">جزئیات سفارشات (#28VR5K59)</h4>
+                                            <div class="user-card-header-right">
+                                                <a href="order-list.html" class="theme-btn"><span
+                                                        class="fas fa-arrow-left"></span> فهرست سفارش</a>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless text-nowrap">
+                                                <thead>
+                                                <tr>
+                                                    <th>محصول</th>
+                                                    <th>برند</th>
+                                                    <th>مقدار</th>
+                                                    <th>اندازه</th>
+                                                    <th>رنگ</th>
+                                                    <th>مجموع</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-list-info">
+                                                            <a href="#">
+                                                                <div class="table-list-img">
+                                                                    <img src="/static/img/product/p1.png" alt="">
+                                                                </div>
+                                                                <div class="table-list-content">
+                                                                    <h6>{{ details.id }}</h6>
+                                                                    <span>{{ details.title }}</span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>میوه</td>
+                                                    <td>۲۰ عدد</td>
+                                                    <td>1 کارتن</td>
+                                                    <td>سیاه</td>
+                                                    <td>۱۵۰ تومان</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                                                                                <div class="table-list-info">
+                                                                                                                    <a href="#">
+                                                                                                                        <div class="table-list-img">
+                                                                                                                            <img src="/static/img/product/p2.png" alt="">
+                                                                                                                        </div>
+                                                                                                                        <div class="table-list-content">
+                                                                                                                            <h6>میوه‌های تازه ارگانیک</h6>
+                                                                                                                            <span>شناسه مورد: #123456</span>
+                                                                                                                        </div>
+                                                                                                                    </a>
+                                                                                                                </div>
+                                                    </td>
+                                                    <td>میوه</td>
+                                                    <td>۲۰ عدد</td>
+                                                    <td>1 کارتن</td>
+                                                    <td>سیاه</td>
+                                                    <td>۱۵۰ تومان</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                                                                                <div class="table-list-info">
+                                                                                                                    <a href="#">
+                                                                                                                        <div class="table-list-img">
+                                                                                                                            <img src="/static/img/product/p3.png" alt="">
+                                                                                                                        </div>
+                                                                                                                        <div class="table-list-content">
+                                                                                                                            <h6>میوه‌های تازه ارگانیک</h6>
+                                                                                                                            <span>شناسه مورد: #123456</span>
+                                                                                                                        </div>
+                                                                                                                    </a>
+                                                                                                                </div>
+                                                    </td>
+                                                    <td>میوه</td>
+                                                    <td>۲۰ عدد</td>
+                                                    <td>1 کارتن</td>
+                                                    <td>سیاه</td>
+                                                    <td>۱۵۰ تومان</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="order-detail-content">
+                                                    <h5>آدرس حمل و نقل</h5>
+                                                    <p><i class="fa fa-location-dot"></i> 25/B میلفورد جاده، ریچیسون
+                                                        درایو، نیویورک، ایالات متحده آمریکا</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="order-detail-content">
+                                                    <h5>خلاصه سفارش</h5>
+                                                    <ul>
+                                                        <li>مجموع فرعی<span>۳۵۰.۰۰۰</span></li>
+                                                        <li>ارسال<span>رایگان</span></li>
+                                                        <li>تخفیف<span>تومان ۱۰.۰۰۰</span></li>
+                                                        <li>مالیات<span>تومان ۲۰.۰۰۰</span></li>
+                                                        <li>مجموع<span>تومان ۳۶۰.۰۰۰</span></li>
+                                                    </ul>
+                                                    <p class="mt-4">پرداخت با کارت اعتباری/دبیت</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="newsletter-area bg pb-100">
+            <div class="container">
+                <div class="newsletter-wrap">
+                    <div class="row">
+                        <div class="col-lg-6 mx-auto">
+                            <div class="newsletter-content">
+                                <h3>دریافت کوپن تخفیف <span>۲۰%</span></h3>
+                                <p>با مشترک شدن در خبرنامه ما</p>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="email" class="form-control" placeholder="آدرس ایمیل شما">
+                                        <button class="theme-btn" type="submit">
+                                            اشتراک <i class="far fa-paper-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer-area">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row footer-widget-wrapper pt-100 pb-40">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget-box about-us">
+                            <a href="#" class="footer-logo">
+                                <img src="/static/img/logo/logo-2.png" alt="">
+                            </a>
+                            <p class="mb-3">
+                                ما انواع مختلفی از معابر در دسترس داریم، اما ماژورها دچار تغییر تزریق شده‌اند.
+                            </p>
+                            <ul class="footer-contact">
+                                <li><a href="tel:+21236547898"><i class="far fa-phone"></i><span class="dir-ltr"> 01112324568</span></a>
+                                </li>
+                                <li><i class="far fa-map-marker-alt"></i>25/B جاده میلفورد، نیویورک</li>
+                                <li><a href="mailto:info@example.com"><i
+                                        class="far fa-envelopes"></i>info@example.com</a></li>
+                                <li><i class="far fa-clock"></i>دوشنبه - جمعه (9.00AM - 8.00PM)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget-box list">
+                            <h4 class="footer-widget-title">پیوندهای سریع</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#">اطلاعات تحویل</a></li>
+                                <li><a href="#">تماس با ما</a></li>
+                                <li><a href="#">به روز رسانی اخبار</a></li>
+                                <li><a href="#">نظرات مشتریانی ما</a></li>
+                                <li><a href="#">شرایط خدمات</a></li>
+                                <li><a href="#">حفظ حریم خصوصی</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget-box list">
+                            <h4 class="footer-widget-title">مرور دسته</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">سبزیجات تازه</a></li>
+                                <li><a href="#">گوشت تازه</a></li>
+                                <li><a href="#">مواد غذایی و منگنه</a></li>
+                                <li><a href="#">غذاهای دریایی و ماهی</a></li>
+                                <li><a href="#">لبنیات و تخم مرغ</a></li>
+                                <li><a href="#">نان و نانوایی</a></li>
+                                <li><a href="#">میوه ها و آب میوه ها</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget-box list">
+                            <h4 class="footer-widget-title">مرکز پشتیبانی</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">سؤالات متداول</a></li>
+                                <li><a href="#">نحوه خرید</a></li>
+                                <li><a href="#">مرکز پشتیبانی</a></li>
+                                <li><a href="#">سفارش خود را پیگیری کنید</a></li>
+                                <li><a href="#">خط مشی بازگشت</a></li>
+                                <li><a href="#">شرکت‌های وابسته ما</a></li>
+                                <li><a href="#">نقشه سایت</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget-box list">
+                            <h4 class="footer-widget-title">برنامه موبایل را دریافت کنید</h4>
+                            <p>برنامه ارگانو اکنون در اپ استور و گوگل پلی در دسترس است.</p>
+                            <div class="footer-download">
+                                <h5>برنامه موبایل ما را دانلود کنید</h5>
+                                <div class="footer-download-btn">
+                                    <a href="#">
+                                        <i class="fab fa-google-play"></i>
+                                        <div class="download-btn-info">
+
+                                            <h6>گوگل پلی</h6>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fab fa-app-store"></i>
+                                        <div class="download-btn-info">
+
+                                            <h6>فروشگاه برنامه</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-payment mt-20">
+                                <span>می پذیریم:</span>
+                                <img src="/static/img/payment/visa.svg" alt="">
+                                <img src="/static/img/payment/mastercard.svg" alt="">
+                                <img src="/static/img/payment/amex.svg" alt="">
+                                <img src="/static/img/payment/discover.svg" alt="">
+                                <img src="/static/img/payment/paypal.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="footer-top-link">
+                            <div class="footer-top-link-info">
+                                <a href="#">بهترین فروش</a>
+                                <a href="#">موارد جدید</a>
+                                <a href="#">سبزیجات</a>
+                                <a href="#">گوشت</a>
+                                <a href="#">مواد غذایی</a>
+                                <a href="#">غذاهای دریایی</a>
+                                <a href="#">ماهی‌ها</a>
+                                <a href="#">لبنیات</a>
+                                <a href="#">تخم مرغ</a>
+                                <a href="#">نانوایی</a>
+                                <a href="#">نان</a>
+                                <a href="#">میوه ها و آب میوه ها</a>
+                                <a href="#">نوشیدنی‌ها</a>
+                                <a href="#">ارگانیک</a>
+                                <a href="#">تخفیف</a>
+                                <a href="#">پرداخت</a>
+                                <a href="#">پشتیبانی</a>
+                                <a href="#">نقشه سایت</a>
+                                <a href="#">شرکت‌های وابسته ما</a>
+                                <a href="#">خط مشی بازگشت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="copyright-wrap">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 align-self-center">
+                            <p class="copyright-text">
+                                © حق چاپ <span id="date">2024</span> <a href="#"> ارگانو </a> کلیه حقوق محفوظ است.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6 align-self-center">
+                            <div class="footer-social">
+                                <span>ما را دنبال کنید: </span>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="#" id="scroll-top" class=""><i class="far fa-arrow-up-from-arc"></i></a>
+
+
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/modernizr.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <script src="/static/js/jquery.appear.min.js"></script>
+    <script src="/static/js/jquery.easing.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/counter-up.js"></script>
+    <script src="/static/js/jquery-ui.min.js"></script>
+    <script src="/static/js/jquery.nice-select.min.js"></script>
+    <script src="/static/js/countdown.min.js"></script>
+    <script src="/static/js/wow.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+    </body>
+{% endblock %}
